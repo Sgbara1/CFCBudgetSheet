@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFC Budget Sheet (Undergraduate)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="cost-estimator">
+        <h1>CFC Budget Sheet (Undergraduate)</h1>
+        <p class="disclaimer">Disclaimer: This is for estimation purposes only and should not be considered an actual cost of attendance calculator. For questions about actual cost of attendance, visit <a href="https://OneStop.UNM.edu" target="_blank">OneStop.UNM.edu</a>.</p>
+        
+        <div class="cfc-description">
+            <p>The Center for Financial Capability (CFC), as a branch of the University of New Mexico Dean of Students Office, is a program dedicated to financial outreach and education. In collaboration with Nusenda Credit Union and UNM, the CFC serves as a valuable resource for the university community. Its mission is to guide students towards financial well-being by offering workshops and personalized consultations focused on fostering healthy money habits. Ultimately, the CFC strives to equip UNM students with the knowledge and confidence to navigate their financial futures successfully, supporting their academic journey and personal growth. We hope you find this calculator useful.</p>
+        </div>
+
+        <h2>Estimate Your Costs</h2>
+        <p>If you need help navigating the calculator, we’re here for you. Give us a call or complete the <a href="https://goto.unm.edu/cfchelp" target="_blank">appointment request form</a> and we’ll do it together.</p>
+
+        <form id="cost-estimate-form">
+            <div class="form-group">
+                <label for="semester">Semester:</label>
+                <select id="semester" name="semester" required>
+                    <option value="Fall">Fall</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="degree-level">Degree Level:</label>
+                <select id="degree-level" name="degree-level" required>
+                    <option value="undergrad">Undergraduate</option>
+                    <option value="grad">Graduate</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="campus">Campus:</label>
+                <select id="campus" name="campus" required>
+                    <option value="main">Main</option>
+                    <option value="valencia">Valencia</option>
+                    <option value="los-alamos">Los Alamos</option>
+                    <option value="taos">Taos</option>
+                    <option value="gallup">Gallup</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select id="location" name="location" required>
+                    <option value="in-state">In-state</option>
+                    <option value="out-of-state">Out of State</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="credit-hours">Credit Hours:</label>
+                <select id="credit-hours" name="credit-hours" required>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                    <option value="18">18</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="calculateEstimate()">Get Started</button>
+            <button type="button" onclick="exportToCSV()">Export to CSV</button>
+        </form>
+
+        <div id="estimate-results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
