@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Estimator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>ESTIMATE YOUR COSTS</h2>
+            <p>Crunch the numbers and get the whole picture.</p>
+            <p>The Center for Financial Capability (CFC), as a branch of the University of New Mexico Dean of Students Office, is a program dedicated to financial outreach and education. In collaboration with Nusenda Credit Union and UNM, the CFC serves as a valuable resource for the university community. Its mission is to guide students towards financial well-being by offering workshops and personalized consultations focused on fostering healthy money habits. Ultimately, the CFC strives to equip UNM students with the knowledge and confidence to navigate their financial futures successfully, supporting their academic journey and personal growth.</p>
+            <p>Disclaimer: this calculator is used to get an estimate. The financial aid office at UNM will depict correct numbers. Find those <a href="https://onestop.unm.edu/" target="_blank">here</a>.</p>
+            <p>Before you prepare to head to campus, take a moment to gather all your financial documents and use our comprehensive calculator. Although it might take about 15 minutes, this will provide you with a nearly precise estimate of your CFC education costs, covering every detail.</p>
+            <p>If you need help navigating the calculator, we’re here for you. Give us a call or complete the <a href="https://goto.unm.edu/cfchelp" target="_blank">appointment request form</a> and we’ll do it together.</p>
+            <p>Note: If you have recently used the calculator, or if the correct semesters aren’t displaying, you may want to clear your browser cache. If you would like to completely start over, <a href="#" onclick="clearData()">erase all data and start again</a>.</p>
+            <p>The CFC Budget Sheet is designed to help students estimate the potential costs of their education. We hope this tool is helpful for you!</p>
+        </div>
+        
+        <form id="cost-estimate-form" class="form">
+            <div class="form-group">
+                <label for="semester">I want to create an estimate cost of attendance for:</label>
+                <select id="semester" name="semester" required>
+                    <option value="Fall">Fall</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="degree-level">I am:</label>
+                <select id="degree-level" name="degree-level" required>
+                    <option value="undergrad">an undergraduate student</option>
+                    <option value="grad">a graduate student</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="campus">attending:</label>
+                <select id="campus" name="campus" required>
+                    <option value="main">Main</option>
+                    <option value="valencia">Valencia</option>
+                    <option value="los-alamos">Los Alamos</option>
+                    <option value="taos">Taos</option>
+                    <option value="gallup">Gallup</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">From:</label>
+                <select id="location" name="location" required>
+                    <option value="in-state">In State</option>
+                    <option value="out-of-state">Out of State</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="credit-hours">I plan to take # of credits:</label>
+                <select id="credit-hours" name="credit-hours" required>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                    <option value="18">18</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn" onclick="calculateEstimate()">Get Started</button>
+            <button type="button" class="btn" onclick="exportToCSV()">Export to CSV</button>
+        </form>
+
+        <div id="estimate-results" class="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
