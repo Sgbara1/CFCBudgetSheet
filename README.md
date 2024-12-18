@@ -7,16 +7,17 @@ CFCBudgetSheet is a tool designed to help students estimate their cost of attend
 - Python 3.x
 - pip (Python package installer)
 
-## Setup Instructions
+## Installation
 
 1. **Clone the Repository**
+   Clone the repository to your local machine using the following command:
    ```bash
    git clone https://github.com/Sgbara1/CFCBudgetSheet.git
    cd CFCBudgetSheet
    ```
 
 2. **Install Dependencies**
-   Install the required Python packages using pip:
+   Use pip to install the required Python packages listed in `requirements.txt`:
    ```bash
    pip install -r requirements.txt
    ```
@@ -24,20 +25,18 @@ CFCBudgetSheet is a tool designed to help students estimate their cost of attend
 ## Running the Tool
 
 ### Running the Scraper
-The scraper fetches and parses cost data from the University of New Mexico's website.
-
+The scraper fetches and parses cost data from the University of New Mexico's website. Run the scraper using:
 ```bash
 python data_scraper.py
 ```
 
 ### Running the Budget Calculator
-The budget calculator uses the scraped data to estimate the total cost of attendance.
-
+The budget calculator uses the scraped data to estimate the total cost of attendance. Start the Flask application with:
 ```bash
 python app.py
 ```
 
-Visit `http://127.0.0.1:5000/` in your web browser to access the tool.
+Once the server is running, open your web browser and navigate to `http://127.0.0.1:5000/` to access the tool.
 
 ## Usage Example
 
@@ -49,6 +48,6 @@ Visit `http://127.0.0.1:5000/` in your web browser to access the tool.
 2. **Expected Output:**
    - Total Estimated Cost of Attendance: $XX,XXX
 
-## Additional Notes
-- Ensure that the HTML structure of the UNM pages matches the assumptions in `data_scraper.py`. Adjust the parsing logic if necessary.
-- The application runs in debug mode by default for easier troubleshooting.
+## Troubleshooting
+- If the scraper fails, ensure that the HTML structure of the UNM pages matches the assumptions in `data_scraper.py`. Adjust the parsing logic if necessary.
+- The application runs in debug mode by default for easier troubleshooting. If you encounter issues, check the console output for error messages.
