@@ -20,7 +20,9 @@ export function Header() {
         <p className="text-[#4a4a4a] text-xl leading-relaxed">
           Plan your educational investment with our intuitive cost estimation tool. Need assistance?{' '}
           <a 
-            href="#"
+            href="https://cfc.unm.edu/schedule-a-workshop-or-training/one-on-one-peer-coaching.html"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[#ba0c2f] hover:text-[#8a0923] font-medium transition-colors duration-200 border-b-2 border-[#ba0c2f] hover:border-[#8a0923]"
           >
             Schedule a consultation
